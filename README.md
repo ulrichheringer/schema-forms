@@ -1,9 +1,16 @@
 # schema-forms
 
-Renderizador local de formulários a partir de JSON Schema. Valida required, tipos, enums, limites, padrões, e-mail, URL e arrays simples; exibe os dados validados e permite exportar JSON.
+Render a form from a JSON Schema, validate its values, and export the result as JSON. Schemas and form data stay in the browser.
 
-## Executar
+## Run locally
 
-Requer Node.js 20.19 ou superior. Rode **npm install** e **npm run dev**; edite ou substitua o exemplo de schema e selecione **Renderizar**. Preencha o formulário para validar e exportar. **npm test** verifica parsing e validação, e **npm run build** gera dist/.
+Requires Node.js 20.19 or later.
 
-Suporta propriedades string, number, integer, boolean, array de valores simples e object aninhado. Referências externas e outras palavras-chave do padrão não são implementadas.
+```sh
+npm install
+npm run dev
+```
+
+Edit the example schema or provide your own, then select **Render**. Fill out the form to see validation results and export the data. Run `npm test` for the parsing and validation tests, or `npm run build` to create the static app in `dist/`.
+
+Supported fields include strings, numbers, integers, booleans, arrays of simple values, and nested objects. The renderer does not implement external references or every JSON Schema keyword.
